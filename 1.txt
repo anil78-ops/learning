@@ -1,0 +1,20 @@
+Query 1: How to Retrieve List of All Databases in SQL Server
+EXEC sp_helpdb
+
+Query 2: How to Display Text of a Stored Procedure, Trigger, or View in SQL Server
+exec sp_helptext @objname = 'Object_Name'
+
+Query 3: How to List All Stored Procedures in SQL Server 
+SELECT DISTINCT o.name, o.xtype
+FROM syscomments c
+INNER JOIN sysobjects o ON c.id=o.id
+WHERE o.xtype='P'
+
+Query 4: How to Get All Stored Procedures Related To a Table in SQL Server
+SELECT DISTINCT o.name, o.xtype
+FROM syscomments c
+INNER JOIN sysobjects o ON c.id=o.id
+WHERE c.TEXT LIKE '%Table_Name%' AND o.xtype='P'
+
+To retrieve the View use “V” instead of “P” and for functions use “FN.
+

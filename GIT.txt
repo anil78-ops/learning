@@ -1,0 +1,23 @@
+vanilkumar4191@gmail.com
+password  7893206878mn
+User name  anil78-ops
+
+git -v
+git config --global user.name "anil78-ops"
+git config --global user.email "vanilkumar4191@gmail.com"
+git config --list
+git config --global core.editor "notepad++.exe -multiInst -nosession"
+git config --global --list
+
+1.what is git stash & git rebase 
+Purpose: Temporarily save changes that are not ready to be committed, allowing you to switch branches without losing your work.
+How it works: When you run git stash, Git takes your modified tracked files and saves them to a stash, reverting your working directory to the last commit. 
+You can later apply these changes back with git stash apply or git stash pop, which also removes the stash after applying.
+Use case: Useful when you need to quickly switch branches to work on something else and want to save your current work in progress without committing it.
+
+2.what is git rebase
+Rebasing creates a linear project history, which can make it easier to understand the progression of changes. 
+This is in contrast to merging, which can create a more complex history with multiple branches.
+
+3.what is cherry pick 
+It is used to select and apply specific committs from one branch to another branch.
